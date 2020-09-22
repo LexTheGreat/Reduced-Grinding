@@ -1,6 +1,6 @@
-author = Dragon3025
-version = 6.0
-displayName = Reduced Grinding
+author = Dragon3025, Marcos
+version = 6.2
+displayName = Reduced Grinding !!!Turn Off Only Download signed mods From Servers!!!
 homepage = http://forums.terraria.org/index.php?threads/reduced-grinding.51082/
 hideCode = false
 hideResources = false

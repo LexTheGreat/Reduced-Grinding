@@ -81,12 +81,12 @@ namespace ReducedGrinding.NPCs
 						shop.item[nextSlot].SetDefaults(ItemID.SandstorminaBottle);
 						nextSlot++;
 					}
-					if (Main.netMode == NetmodeID.SinglePlayer) //Singleplayer
-					{
-						shop.item[nextSlot].SetDefaults(mod.ItemType("Expert_Change_Potion"));
-						nextSlot++;
-					}
-					break;
+					shop.item[nextSlot].SetDefaults(mod.ItemType("Expert_Change_Potion"));
+					nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(mod.ItemType("Meteor_Caller"));
+                    nextSlot++;
+                    break;
 				case NPCID.DyeTrader:
 					if (GetInstance<FOtherVanillaNPCConfig>().AllNPCsSellTheirDeathLoot)
 					{

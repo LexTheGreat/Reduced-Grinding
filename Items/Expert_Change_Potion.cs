@@ -21,29 +21,23 @@ namespace ReducedGrinding.Items
 			item.useAnimation = 45;
 			item.useTime = 45;
 			item.useStyle = 4;
-			item.value = Item.buyPrice(0, 0, 1);
+			item.value = Item.buyPrice(0, 10);
 			item.UseSound = SoundID.Item3;
 			item.consumable = true;
 		}
 
 		public override bool CanUseItem(Player player)
 		{
-			if (Main.netMode == NetmodeID.SinglePlayer) // Single Player
-				return true;
-			else
-				return false;
+			return true;
 		}
 
 		public override bool UseItem(Player player)
 		{
-			if (Main.netMode == NetmodeID.SinglePlayer) // Single Player
-			{
-				if (Main.expertMode)
-					Main.NewText("World difficulty is now Normal Mode.", 255, 255, 0);
-				else
-					Main.NewText("World difficulty is now Expert Mode.", 207, 136, 255);
-			}
-			Main.expertMode = (!Main.expertMode);
+			if (Main.expertMode)
+				Main.NewText("World difficulty is now Normal Mode.", 255, 255, 0);
+			else
+				Main.NewText("World difficulty is now Expert Mode.", 207, 136, 255);
+
 			return true;
 		}
 	}
